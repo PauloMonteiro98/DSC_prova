@@ -1,13 +1,13 @@
 package com.prova.demo.controller;
 
-import java.util.List;
+/*import java.util.List;*/
 
 import org.springframework.beans.factory.annotation.Autowired;
-/*import org.springframework.data.domain.Page;*/
-/*import org.springframework.data.domain.Pageable;*/
-/*import org.springframework.data.web.PageableDefault;*/
-/*import org.springframework.http.ResponseEntity;
-/*import org.springframework.transaction.annotation.Transactional;*/
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.web.PageableDefault;
+import org.springframework.http.ResponseEntity;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-/*import org.springframework.web.util.UriComponentsBuilder;*/
+import org.springframework.web.util.UriComponentsBuilder;
 
 import com.prova.demo.domain.usuario.Usuario;
 import com.prova.demo.repository.UsuarioRepository;
@@ -25,7 +25,9 @@ import com.prova.demo.repository.UsuarioRepository;
 @RestController
 @RequestMapping("usuarios")
 public class UsuarioController {
-    
+
+    /* 
+
     @Autowired
     private UsuarioRepository usuarioRepository;
 
@@ -57,9 +59,9 @@ public class UsuarioController {
     @DeleteMapping("/{id}")
     public void deleteUsuario(@PathVariable Long id) {
         usuarioRepository.deleteById(id);
-    }
+    }*/
 
-    /*@Autowired
+    @Autowired
   private UsuarioRepository repository;
 
   @PostMapping
@@ -100,5 +102,5 @@ public class UsuarioController {
         usuarioLocal.setNome(usuario.getNome());
 
         return ResponseEntity.ok(usuarioLocal);
-    }*/
+    }
 }
